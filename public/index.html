@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Demjjjo</title>
+    <base href="/"/>
+
+    <!-- JQuery required by bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+            integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap to make this demo not look god awful -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- The actual angular code -->
+    <script src="modules/angular/angular.min.js"></script>
+    <script src="modules/angular-route/angular-route.min.js"></script>
+
+    <!-- We need to include all our js code for the controller-->
+    <script src="public/app.js"></script>
+    <script src="public/home/home.controller.js"></script>
+    <script src="public/nav/nav.controller.js"></script>
+    <script src="public/wiki/wiki.controller.js"></script>
+
+    <!-- These are the services for our angular app -->
+    <script src="public/common/services/wiki.service.js"></script>
+
+</head>
+<body class="container-fluid">
+    <div class="row">
+        <nav-bar></nav-bar>
+    </div>
+    <div class="row">
+        <ng-view></ng-view>
+    </div>
+</body>
+</html>

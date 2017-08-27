@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Search</label>
+                <!--
+                    Here we use ng-model to label what variable in our controller the text in this input will
+                    be held in. In this case the ng-model is 'search', which will be held in the '$scope.search' variable
+                    within the wikiController
+                -->
+                <input type="text"
+                       class="form-control"
+                       ng-model="search" />
+                <button
+                        class="btn btn-primary"
+                        ng-click="searchFor()">
+                    Search
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--
+        Here we use one of angular js's attributes 'ng-show', this will hide or show the html code based on whether the
+        variable or condition we set it to is true or false. Here we just have a variable, so if we set $scope.requested = true
+        in the controller code, this div will show on the screen, otherwise it will be hidden, even if it has content
+    -->
+    <div ng-show="requested" ng-repeat="result in results track by $index">
+        <!--
+            Ng-repeat is basically a for loop to to show multiple results on the screen at once.
+        -->
+        <div class="row">
+            <!--
+                Here I know that the result will contain a key called 'title', so I use the curley braces to
+                put the value of the title for each result onto the page
+            -->
+            <label>Title</label>
+            {{result.title}}
+        </div>
+    </div>
+    <!--
+        If there is an error, we will make '$scope.error' true instead
+    -->
+    <div ng-show="error">
+        Error : {{errorMessage}}
+    </div>
+
+    <div ng-show="noResults">
+        No results for term : {{search}}
+    </div>
+</div>
