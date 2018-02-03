@@ -6,7 +6,8 @@
  *
  */
 var request = require('request'),
-    querystring = require('query-string');
+    querystring = require('query-string'),
+    mergeArray = require('merge-array');
 
 //The url for the wiki api.
 var url = 'https://en.wikipedia.org/w/api.php';

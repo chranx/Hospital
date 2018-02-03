@@ -19,8 +19,11 @@ angular.module('app')
           case 'Home':
             $location.path('/');
             break;
-          case 'Wiki':
-            $location.path('/wiki');
+            case 'Wiki':
+                $location.path('/wiki');
+                break;
+            case 'Bitcoinsearch':
+                $location.path('/bitcoinsearch');
         }
       };
     

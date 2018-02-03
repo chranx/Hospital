@@ -7,6 +7,7 @@
     "body-parser": "^1.16.1",
     "express": "^4.14.1",
     "http": "0.0.0",
+    "merge-array": "^1.0.0",
     "path": "^0.12.7",
     "query-string": "^4.3.2",
     "request": "^2.79.0"

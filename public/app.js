@@ -38,10 +38,14 @@ angular.module('app',['ngRoute'])
         templateUrl : 'public/home/home.html',
         controller : 'homeController'
       })
-      .when('/wiki',{
-        templateUrl : 'public/wiki/wiki.html',
-        controller : 'wikiController'
-      })
+        .when('/wiki',{
+            templateUrl : 'public/wiki/wiki.html',
+            controller : 'wikiController'
+        })
+        .when('/bitcoinsearch',{
+            templateUrl : 'public/bitcoinsearch/bitcoinsearch.html',
+            controller : 'bitcoinsearchController'
+        })
       .otherwise({
         redirectTo : '/'
       });
